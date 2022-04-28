@@ -5,8 +5,10 @@ import {
   View,
   TextInput,
   Button,
+  TouchableHighlight,
 } from 'react-native';
 
+import { Actions } from 'react-native-router-flux'
 
 const LoginForm = () => {
   
@@ -19,6 +21,9 @@ const LoginForm = () => {
         
           <TextInput  placeholder='E-mail' style={{ fontSize:20, height: 45 , padding: 10}}/>
           <TextInput  placeholder='Senha' style={{ fontSize:20, height: 45 , padding: 10}}/>
+          <TouchableHighlight onPress={ () => Actions.formCadastro() }>
+            <Text> Nao tem cadastro? Cadastre-se</Text>
+          </TouchableHighlight>
           
       </View>
       <View style={{ flex: 2, } }>
